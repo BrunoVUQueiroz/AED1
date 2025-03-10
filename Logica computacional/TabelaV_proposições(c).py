@@ -1,0 +1,1 @@
+print(f' P | Q | R | notP | notQ | R V notQ | notP -> RnotQ | P <-> PRQ')
