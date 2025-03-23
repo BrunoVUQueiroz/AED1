@@ -1,44 +1,3 @@
-print(f' P | Q | R | ¬( P V R) | NotPR | NotP | NotQ | (NorP ^ NotQ) | NotPR <-> NotPQ')
-
-for a in range(0,2,1):
-    for b in range(0,2,1):
-        for c in range(0,2,1):
-            if a==0:
-                P='V' 
-                NotP='F'
-            else:
-                P='F'
-                NotP='V'
-            if b==0:
-                Q='F'
-                NotQ='V'
-            else:
-                Q='V'
-                NotQ='F'
-            if c==0:
-                R='V'
-            else:
-                R='F'
-            if P=='V' or R=='V':
-                PR='V'
-                NotPR='F'
-            else:
-                PR='F'
-                NotPR='V'
-            if NotP=='V' and NotQ=='V':
-                NotPQ='V'
-            else:
-                NotPQ='F'
-            if NotPR==NotPQ:
-                print(f'{P} | {Q} | {R} | {PR} | {NotPR} | {NotP} | ')
-
-
-
-
-
-
-
-
 # Imprime o cabeçalho da tabela
 print(f' P | Q | R | ¬(P v R) | NotPR | NotP | NotQ | (NotP ^ NotQ) | NotPR <-> NotPQ')
 
@@ -77,7 +36,7 @@ for a in range(2):  # P pode ser 0 (V) ou 1 (F)
                 falsos += 1
 
             # Exibe a linha da tabela
-            print(f'{P} | {Q} | {R} | {PR}  | {NotPR}  | {NotP}  | {NotQ}  | {NotPQ}  | {Equivalente}')
+            print(f'{P} | {Q} | {R} | {NotPR}  | {PR}  | {NotP}  | {NotQ}  | {NotPQ}  | {Equivalente}')
 
 # Classificação da expressão lógica
 if falsos == 0:
